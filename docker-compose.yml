@@ -1,0 +1,17 @@
+version: "2"
+services:
+  zc_web:
+    build: 
+      context: ./src
+    container_name: zc_web
+    volumes:
+      - ./src:/app
+    ports:
+      - 3000:3000
+    links:
+      - zc_mongo:zc_mongo
+    depends_on:
+      - zc_mongo
+  zc_mongo:
+    image: mongo 
+    container_name: zc_mongo

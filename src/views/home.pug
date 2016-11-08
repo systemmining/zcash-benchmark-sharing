@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1 Boilerplade
+  p.lead template
+  hr
+  .row
+    .col-sm-12
+      table.table.table-striped
+        thead
+          tr
+            th #
+            th Username
+            th Bare or VM
+            th CPU
+            th Speed
+            th Cores
+            th Total Ram
+            th Total Swap
+            th Avg Time Solve Equihash 20 
+        tbody
+          //- each item in benchmarkLists
+          //-   tr
+          //-     td item
